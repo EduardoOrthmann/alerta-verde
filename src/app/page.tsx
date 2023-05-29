@@ -3,7 +3,7 @@ import './page.module.css';
 export default function Home() {
   return (
     <main>
-      <h2>aaaaa</h2>
+      <h2>abcdefghijklmnoABCDEFGHIJKLMNO</h2>
     </main>
   );
 }
