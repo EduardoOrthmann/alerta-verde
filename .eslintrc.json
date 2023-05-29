@@ -3,14 +3,9 @@
     "browser": true,
     "es2021": true
   },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
   "extends": [
+    "next/core-web-vitals",
     "plugin:react/recommended",
-    "plugin:@next/next/recommended",
     "airbnb",
     "plugin:prettier/recommended",
     "prettier"
@@ -25,30 +20,12 @@
   },
   "plugins": [
     "react",
-    "@typescript-eslint",
-    "react-hooks",
-    "eslint-plugin-import-helpers"
+    "@typescript-eslint"
   ],
   "rules": {
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": "off",
     "prettier/prettier": "error",
-    "import-helpers/order-imports": [
-      "warn",
-      {
-        "newlinesBetween": "always",
-        "groups": [
-          ["/^react/", "/^next/", "/@next/"],
-          "/components/",
-          "/module/",
-          "/^@shared/",
-          "/absolute/",
-          ["parent", "sibling", "index"]
-        ],
-        "alphabetize": { "order": "asc", "ignoreCase": true }
-      }
-    ]
+    "react/jsx-filename-extension": "off",
+    "react/react-in-jsx-scope": "off",
+    "import/extensions": "off"
   }
 }
