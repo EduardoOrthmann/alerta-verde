@@ -1,0 +1,10 @@
+
+
+.navbar img {
+  max-width:230px;
+  max-height:95px;
+  width: auto;
+  height: auto;
+
+  padding: '0.5rem 0'
+}
