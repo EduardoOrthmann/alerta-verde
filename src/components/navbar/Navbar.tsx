@@ -11,8 +11,7 @@ import css from './Navbar.module.css';
 
 export default function Navbar() {
   const pathname = usePathname();
-  const indexPage = PAGES.find((page) => page.name === pathname)?.index;
-  const [value, setValue] = useState(indexPage);
+  const [activeTab, setActiveTab] = useState<string>(pathname);
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down('md'));
 
@@ -51,11 +50,14 @@ export default function Navbar() {
                   style={{ padding: '0.5rem 0' }}
                 />
               </Link>
-              <Tabs indicatorColor="secondary" textColor="inherit" value={value} onChange={(e, v) => setValue(v)}>
+              <Tabs
+                indicatorColor="secondary"
+                textColor="inherit"
+                value={activeTab}
+                onChange={(event, newPath) => setActiveTab(newPath)}
+              >
                 {PAGES.map((page) => (
-                  <Link href={page.href} key={page.index}>
-                    <Tab label={page.name} />
-                  </Link>
+                  <Tab label={page.name} value={page.href} component={Link} href={page.href} key={page.name} />
                 ))}
               </Tabs>
               <div style={{ display: 'flex', gap: '1rem' }}>
