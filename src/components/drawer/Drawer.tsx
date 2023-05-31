@@ -11,7 +11,7 @@ export default function DrawerComp() {
       <Drawer anchor="left" open={openDrawer} onClose={() => setOpenDrawer(false)}>
         <List>
           {PAGES.map((page) => (
-            <ListItemButton key={page.index}>
+            <ListItemButton key={page.name}>
               <ListItemIcon>
                 <ListItemText>{page.name}</ListItemText>
               </ListItemIcon>
