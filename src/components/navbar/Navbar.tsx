@@ -53,7 +53,7 @@ export default function Navbar() {
               <Tabs
                 indicatorColor="secondary"
                 textColor="inherit"
-                value={activeTab}
+                value={PAGES.some((page) => page.href === activeTab) ? activeTab : false}
                 onChange={(event, newPath) => setActiveTab(newPath)}
               >
                 {PAGES.map((page) => (
