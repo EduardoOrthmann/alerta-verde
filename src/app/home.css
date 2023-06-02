@@ -1,0 +1,47 @@
+.home {
+  min-height: 120vh;
+  background-image: url('../../public/index-background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  justify-content: center;
+}
+
+.home main {
+  height: 100vh;
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5rem;
+  gap: 4rem;
+  text-align: center;
+
+  @media screen and (width <= 992px) {
+    width: 50vh;
+  }
+
+  & h1 {
+    font-size: 58px;
+  }
+
+  & p {
+    font-size: 24px;
+  }
+
+  & .main-button-group {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+@media screen and (width <= 576px) {
+  .home main h1 {
+    font-size: 40px;
+  }
+
+  .home main p {
+    font-size: 20px;
+  }
+}

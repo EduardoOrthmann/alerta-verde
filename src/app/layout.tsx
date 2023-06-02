@@ -5,6 +5,7 @@ import React from 'react';
 import './globals.css';
 import Navbar from '@/components/navbar/Navbar';
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
+import './home.css';
 
 export const metadata = {
   title: 'AlertaVerde',
@@ -37,6 +38,7 @@ const theme = createTheme({
         root: {
           color: '#000',
           borderRadius: '10px',
+          padding: '14px 16px',
         },
       },
     },
@@ -50,7 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider theme={theme}>
           <CssBaseline>
             <Navbar />
-            <div style={{ marginTop: '10rem' }}>{children}</div>
+            <div>{children}</div>
           </CssBaseline>
         </ThemeProvider>
       </body>
