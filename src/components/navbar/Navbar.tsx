@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AppBar, Button, Tab, Tabs, Toolbar, useMediaQuery, useTheme } from '@mui/material';
 import PAGES from '@/constants/pageConstants';
 import Link from 'next/link';
@@ -11,9 +11,13 @@ import css from './Navbar.module.css';
 
 export default function Navbar() {
   const pathname = usePathname();
-  const [activeTab, setActiveTab] = useState<string>(pathname);
+  const [activeTab, setActiveTab] = useState<string>('');
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down('md'));
+
+  useEffect(() => {
+    setActiveTab(pathname);
+  }, [pathname]);
 
   return (
     <nav className={css.navbar}>
