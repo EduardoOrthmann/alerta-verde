@@ -1,13 +1,13 @@
-.home {
-  min-height: 120vh;
+body {
+  min-height: 100vh;
   background-image: url('../../public/index-background.png');
   background-repeat: no-repeat;
-  background-position: center;
-  display: grid;
+  background-position: top;
+  display: flex;
   justify-content: center;
 }
 
-.home main {
+.container {
   height: 100vh;
   width: 45vw;
   display: flex;
@@ -21,6 +21,9 @@
   @media screen and (width <= 992px) {
     width: 50vh;
   }
+}
+
+.home .main-section {
 
   & h1 {
     font-size: 58px;
@@ -45,3 +48,4 @@
     font-size: 20px;
   }
 }
+
