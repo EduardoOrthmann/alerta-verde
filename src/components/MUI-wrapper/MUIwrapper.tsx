@@ -13,23 +13,41 @@ const theme = createTheme({
     },
   },
   palette: {
+    mode: 'light',
     primary: {
       main: '#04D361',
     },
     secondary: {
       main: '#dbf301',
     },
-    text: {
-      primary: '#000',
-    },
   },
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          color: '#000',
           borderRadius: '10px',
-          padding: '12px 16px',
+        },
+      },
+      defaultProps: {
+        size: 'large',
+      },
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        colorTransparent: {
+          backdropFilter: 'blur(4px)',
+        },
+      },
+      defaultProps: {
+        elevation: 0,
+      },
+    },
+    MuiTextField: {
+      defaultProps: {
+        InputLabelProps: {
+          sx: {
+            top: '-2px',
+          },
         },
       },
     },

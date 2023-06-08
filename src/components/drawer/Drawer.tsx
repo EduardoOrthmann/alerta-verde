@@ -20,7 +20,7 @@ export default function DrawerComp() {
           ))}
         </List>
       </Drawer>
-      <IconButton sx={{ color: 'black', marginRight: 'auto' }} onClick={() => setOpenDrawer(!openDrawer)}>
+      <IconButton sx={{ marginRight: 'auto' }} onClick={() => setOpenDrawer(!openDrawer)}>
         <MenuIcon />
       </IconButton>
     </>

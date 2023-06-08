@@ -1,10 +1,12 @@
 'use client';
 
-import { Button, TextField } from '@mui/material';
+import { Button, TextField, useTheme } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import Image from 'next/image';
 
 export default function Home() {
+  const theme = useTheme();
+
   return (
     <div className="home flex-center">
       <main className="main-section container flex-center max-text">
@@ -19,12 +21,15 @@ export default function Home() {
       </main>
 
       <section className="first-section container flex-center">
-        <div className="solid-color-background">
+        <div
+          className="solid-color-background"
+          style={theme.palette.mode === 'light' ? { backgroundColor: '#EBEDF7' } : { backgroundColor: '#2C2D35' }}
+        >
           <div className="text">
             <h2>Junte se a nós!</h2>
             <div>
               <p>
-                faça a diferença para o nosso planeta Terra. Aqui, você encontrará um espaço dedicado a promover ações
+                Faça a diferença para o nosso planeta Terra. Aqui, você encontrará um espaço dedicado a promover ações
                 positivas em prol da natureza, compartilhar informações relevantes e engajar-se em atividades que
                 ajudarão a preservar o meio ambiente.
               </p>
@@ -61,12 +66,7 @@ export default function Home() {
           </p>
           <p>Pesquise as notícias públicadas pelo IBGE:</p>
           <div className="button-group">
-            <TextField
-              label="Pesquisar"
-              variant="outlined"
-              InputProps={{ sx: { height: 53 } }}
-              InputLabelProps={{ sx: { top: '-4px' } }}
-            />
+            <TextField label="Pesquisar" variant="outlined" size="small" />
             <Button variant="outlined">
               <SearchIcon />
             </Button>
