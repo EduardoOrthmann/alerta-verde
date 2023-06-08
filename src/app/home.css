@@ -17,7 +17,18 @@
   text-align: center;
 }
 
+.home .solid-color-background {
+  width: 100%;
+  padding: 3rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  text-align: start;
+}
+
 .container {
+  min-height: 100vh;
   height: 100vh;
 }
 
@@ -42,13 +53,7 @@
   width: 100vw;
 
   & .solid-color-background {
-    width: 100%;
-    padding: 3rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
-    text-align: start;
+    flex-wrap: wrap-reverse;
 
     & .img {
       aspect-ratio: 3/2;
@@ -76,6 +81,7 @@
   justify-content: center;
   text-align: start;
   gap: 5rem;
+  flex-wrap: wrap;
 
   & .img {
     aspect-ratio: 3/3;
@@ -100,6 +106,33 @@
   }
 }
 
+.third-section  {
+  width: 100%;
+  flex: 1;
+
+  & .solid-color-background {
+    min-height: 70vh;
+    background-image: url('../../public/index-background-third-section.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    & div {
+      display: flex;
+      justify-content: center;
+      gap: 5rem;
+      flex-wrap: wrap;
+    }
+
+    & .text {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 25rem;
+    }
+  }
+}
+
 @media screen and (width <= 576px) {
   .home main h1 {
     font-size: 40px !important;
@@ -111,19 +144,9 @@
 }
 
 @media screen and (width <= 992px) {
-  .home .first-section .solid-color-background {
-    flex-direction: column-reverse;
-
+  .home .first-section .solid-color-background, .home .second-section {
     & .img {
       max-width: 50vw;
-    }
-  }
-
-  .home .second-section {
-    flex-direction: column;
-
-    & .img {
-      max-width: 40vw;
     }
   }
 }

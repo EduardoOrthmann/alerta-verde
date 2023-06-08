@@ -73,6 +73,25 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="third-section container flex-center">
+        <div className="solid-color-background">
+          <div>
+            <p className="text">
+              Plantar árvores, denunciar desmatamentos e acompanhar as notícias mais recentes sobre as questões
+              ambientais são apenas algumas das maneiras pelas quais você pode contribuir com nossa comunidade. Estamos
+              empenhados em fornecer uma plataforma acessível e intuitiva, projetada para que todos possam participar e
+              fazer a diferença, independentemente de sua formação ou localização.
+            </p>
+            <p className="text">
+              Com a nossa rede social, você pode organizar eventos de plantio de árvores, envolvendo pessoas de sua
+              região para criar uma comunidade de defensores da natureza. Cada árvore plantada é um passo importante
+              para a restauração e proteção de nossas florestas. Juntos, podemos ajudar a mitigar os efeitos das
+              mudanças climáticas e a preservar a biodiversidade.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
