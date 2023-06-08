@@ -1,6 +1,7 @@
 'use client';
 
-import { Button } from '@mui/material';
+import { Button, TextField } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
 import Image from 'next/image';
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
           <Button variant="outlined">Cadastrar</Button>
         </div>
       </main>
+
       <section className="first-section container flex-center">
         <div className="solid-color-background">
           <div className="text">
@@ -38,6 +40,37 @@ export default function Home() {
             sizes="100vw"
             className="img"
           />
+        </div>
+      </section>
+
+      <section className="second-section container flex-center">
+        <Image
+          src="/index-background-second-section.jpg"
+          alt="img"
+          width={0}
+          height={0}
+          sizes="100vw"
+          className="img"
+        />
+        <div className="text">
+          <p>
+            Não deixe de acompanhar as últimas notícias publicadas pelo IBGE (Instituto Brasileiro de Geografia e
+            Estatística) sobre as causas ambientais. Esteja sempre informado sobre as descobertas mais recentes, dados
+            estatísticos e pesquisas científicas que ajudarão a aprofundar seu conhecimento e embasar suas ações em prol
+            da preservação do meio ambiente.
+          </p>
+          <p>Pesquise as notícias públicadas pelo IBGE:</p>
+          <div className="button-group">
+            <TextField
+              label="Pesquisar"
+              variant="outlined"
+              InputProps={{ sx: { height: 53 } }}
+              InputLabelProps={{ sx: { top: '-4px' } }}
+            />
+            <Button variant="outlined">
+              <SearchIcon />
+            </Button>
+          </div>
         </div>
       </section>
     </div>
