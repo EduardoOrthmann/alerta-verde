@@ -1,5 +1,4 @@
-body {
-  min-height: 100vh;
+.home {
   background-image: url('../../public/index-background.png');
   background-repeat: no-repeat;
   background-position: top;
