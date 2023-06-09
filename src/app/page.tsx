@@ -1,8 +1,13 @@
 'use client';
 
-import { Button, TextField, useTheme } from '@mui/material';
+import { Avatar, Button, Paper, TextField, useTheme } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import Image from 'next/image';
+import Logo from '@/components/logo-image/Logo';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import Link from 'next/link';
 
 export default function Home() {
   const theme = useTheme();
@@ -66,7 +71,7 @@ export default function Home() {
           </p>
           <p>Pesquise as notícias públicadas pelo IBGE:</p>
           <div className="button-group">
-            <TextField label="Pesquisar" variant="outlined" size="small" />
+            <TextField label="Pesquisar" variant="outlined" size="small" sx={{ flex: 1 }} />
             <Button variant="outlined">
               <SearchIcon />
             </Button>
@@ -92,6 +97,27 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <footer className="flex-center">
+        <Logo />
+        <Paper className="social-medias">
+          <Link href="https://wa.me/47999197929" target="_blank" rel="noreferrer">
+            <Avatar sx={{ backgroundColor: '#04D361' }}>
+              <WhatsAppIcon />
+            </Avatar>
+          </Link>
+          <Link href="https://www.instagram.com/edusnowyy/" target="_blank" rel="noreferrer">
+            <Avatar sx={{ backgroundColor: '#04D361' }}>
+              <InstagramIcon />
+            </Avatar>
+          </Link>
+          <Link href="mailto:orthmann2811@gmail.com" target="_blank" rel="noreferrer">
+            <Avatar sx={{ backgroundColor: '#04D361' }}>
+              <MailOutlineIcon />
+            </Avatar>
+          </Link>
+        </Paper>
+      </footer>
     </div>
   );
 }
