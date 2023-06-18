@@ -22,6 +22,9 @@ export default function MUIwrapper({ children }: MUIwrapperProps) {
           button: {
             textTransform: 'capitalize',
           },
+          allVariants: {
+            wordSpacing: '2px',
+          },
         },
         palette: {
           mode: isDarkMode ? 'dark' : 'light',
@@ -59,6 +62,13 @@ export default function MUIwrapper({ children }: MUIwrapperProps) {
                 sx: {
                   top: '-2px',
                 },
+              },
+            },
+          },
+          MuiCard: {
+            styleOverrides: {
+              root: {
+                borderRadius: '10px',
               },
             },
           },
